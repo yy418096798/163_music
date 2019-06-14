@@ -29,23 +29,23 @@ def DownMusic():
     for s, name in zip(music_id, song_name):
         s = s[0]
         print(s, name)
-    #     # url2 = "http://music.163.com/song/media/outer/url?id=317151.mp3"
-    #     url2 = "http://music.163.com/song/media/outer/url?id=%s.mp3" % s
+        # url2 = "http://music.163.com/song/media/outer/url?id=317151.mp3"
+        url2 = "http://music.163.com/song/media/outer/url?id=%s.mp3" % s
 
-    #     r = requests.get(url2, headers = headers)
-    #     # r.encoding = r.apparent_encoding
-    #     # html1 = r.text
-    #     # tree1 = etree.HTML(html1)
-    #     # href = tree1.xpath("//source")
-    #     # print(html1)
-    #     # break
-    #     with open(name+".mp3", "wb") as f:
-    #         f.write(r.content)
-    #     text.insert(END,"正在下载： "+name)
-    #     text.see(END)
-    #     text.update()
-    #
-    # text.insert(END,"Complete")
+        r = requests.get(url2, headers = headers)
+        # r.encoding = r.apparent_encoding
+        # html1 = r.text
+        # tree1 = etree.HTML(html1)
+        # href = tree1.xpath("//source")
+        # print(html1)
+        # break
+        with open(name+".mp3", "wb") as f:
+            f.write(r.content)
+        text.insert(END,"正在下载： "+name)
+        text.see(END)
+        text.update()
+    
+     text.insert(END,"Complete")
 
 # 创建窗口
 root = Tk()
